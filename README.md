@@ -30,7 +30,7 @@ find method declare in MY_Model class.
 
 ## Function Referances
 
-### find([$where = NULL, [$limit = NULL, [$as_array]]])
+### find([$where = NULL, [$limit = NULL, [$as_array = FALSE]]])
 Find method accept three paramter and return result array (object in array or array in array).
 
 * $where as key pair collumn name and value based filter 
