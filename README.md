@@ -30,14 +30,16 @@ find method declare in MY_Model class.
 
 ## Function Referances
 
-### find([$where = NULL, [$limit = NULL, [$as_array = FALSE]]])
+### find([$where = NULL, [$like = NULL, [$order = NULL, [$limit = NULL, [$as_array = FALSE]]]]])
 Find method accept three paramter and return result array (object in array or array in array).
 
-* $where as key pair collumn name and value based filter 
+* $where as key pair column name and value based filter 
+* $like as key pair column name and value based filter by text containing
+* $order as either array of columns or string based order clause
 * $limit as array, first element length second element start position
 * $as_array as boolean. TRUE is return array in array result, FALSE is return object in array result
 
-### query_count([$where = NULL])
+### query_count([$where = NULL, [$like = NULL]])
 This function same as find, but return query total record count!
 
 ### get($id)
@@ -47,10 +49,13 @@ This function only single record by id. Record as object.
 This function update record(s). Accept 2 paramters
 
 * $model as key pair column and value array
-* $where as key pair column and value based filter
+* $where as key pair column and value based filter to affect row(s)
 
-### insert($model)
-This function add single record. $model as key pair column and value array.
+### insert($model, [$get_id = FALSE])
+This function add single record. $model as key pair column and value array. Accept 2 params
+
+* $model as key pair column and value array
+* $get_id as bool to return inserted record id if use TRUE that
 
 ### delete($id)
 This function delete record from gived id value
