@@ -38,7 +38,7 @@ class MY_Model extends CI_Model {
             $this->db->like($like);
         }
         if ($order !== NULL) {
-            $this->order_by($order);
+            $this->db->order_by($order);
         }
         if ($limit !== NULL) {
             $this->db->limit($limit[0], $limit[1]);
